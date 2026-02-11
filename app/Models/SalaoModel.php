@@ -9,7 +9,7 @@ class SalaoModel extends Model
     protected $primaryKey = 'id';
     protected $useTimestamps = true;
     protected $allowedFields = [
-        'nome', 'slug', 'email', 'telefone', 'status', 'rua', 'bairro', 'cidade', 'cep'
+        'nome', 'slug', 'email', 'telefone', 'status', 'rua', 'bairro', 'cidade', 'cep','cliente','slug_cliente'
     ];
 
     public function getAllActive()

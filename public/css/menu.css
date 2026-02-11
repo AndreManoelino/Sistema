@@ -4,109 +4,95 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow-x: hidden;
-    color: #333;
+    overflow: hidden;
+    color: #fff;
 }
 
+/* Fundo fixo com efeito escuro */
 body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background: url('https://images.unsplash.com/photo-1612919238162-5bba0a3a83a4?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
     background-size: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.55);
     z-index: 0;
 }
 
+/* Container central */
 .container {
     position: relative;
     z-index: 1;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
     padding: 35px 45px;
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Título */
 h1 {
     margin-bottom: 25px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #222;
+    font-size: 22px;
 }
 
+/* Lista de links do menu */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-li {
-    padding: 15px 20px;
+ul li {
+    padding: 12px 18px;
     margin-bottom: 12px;
     background: rgba(0,123,255,0.1);
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.3s ease;
-    text-align: left;
 }
 
-li:hover {
+ul li:hover {
     background: rgba(0,123,255,0.2);
     transform: translateY(-2px);
 }
 
-.salao-nome {
-    font-weight: 600;
+ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 16px;
-    color: #007BFF;
-    text-decoration: none;
 }
 
-.salao-nome:hover {
-    text-decoration: underline;
-    color: #0056b3;
-}
-
-.actions {
-    margin-top: 8px;
-}
-
-.actions a {
-    color: #007BFF;
-    text-decoration: none;
-    font-size: 14px;
-    margin-right: 8px;
-}
-
-.actions a:hover {
+ul li a:hover {
     color: #0056b3;
     text-decoration: underline;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 18px;
-    margin-bottom: 20px;
-    background-color: #007BFF;
-    border-radius: 6px;
-    color: #fff;
-    font-weight: bold;
+/* Link voltar */
+.voltar {
+    display: block;
+    margin-top: 25px;
+    color: #007BFF;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.voltar:hover {
+    text-decoration: underline;
 }
 
+/* Animação fade-in */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -117,18 +103,12 @@ li:hover {
     .container {
         padding: 25px 20px;
     }
-
+    
     h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
-    .btn {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    li {
-        font-size: 14px;
-        padding: 12px;
+    ul li a {
+        font-size: 15px;
     }
 }

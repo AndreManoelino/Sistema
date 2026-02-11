@@ -15,9 +15,14 @@
             <ul>
                 <?php foreach ($saloes as $salao) : ?>
                     <li>
-                        <strong><?= esc($salao['nome']) ?></strong> - <?= esc($salao['rua']) ?>
-                        <a href="/saloes/editar/<?= $salao['id'] ?>">Editar</a> |
-                        <a href="/saloes/deletar/<?= $salao['id'] ?>" onclick="return confirm('Deseja realmente deletar?')">Deletar</a>
+                        <div class="salao-info">
+                            <strong><?= esc($salao['nome']) ?></strong> - <?= esc($salao['rua']) ?>, <?= esc($salao['cep']) ?> - <?= esc($salao['bairro']) ?>
+                        </div>
+                        <div class="actions">
+                            <a href="/saloes/menu/<?= $salao['id'] ?>" class="btn-menu">Menu</a>
+                            <a href="/saloes/editar/<?= $salao['id'] ?>">Editar</a> |
+                            <a href="/saloes/deletar/<?= $salao['id'] ?>" onclick="return confirm('Deseja realmente deletar?')">Deletar</a>
+                        </div>
                     </li>
                 <?php endforeach; ?>
             </ul>

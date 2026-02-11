@@ -15,3 +15,10 @@ $routes->get('/saloes/editar/(:num)', 'SalaoController::editar/$1');
 $routes->post('/saloes/atualizar/(:num)', 'SalaoController::atualizar/$1'); 
 
 $routes->get('/saloes/deletar/(:num)', 'SalaoController::deletar/$1'); 
+$routes->get('/saloes/menu/(:num)', 'SalaoController::menu/$1');
+
+
+
+$routes->get('/saloes/gerar-url/(:num)', 'SalaoController::gerarUrl/$1');
+$routes->get('/saloes/menu/dono/(:num)', 'SalaoController::menuDono/$1');
+$routes->get('/saloes/menu/cliente/(:segment)', 'SalaoController::menuCliente/$1');
