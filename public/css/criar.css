@@ -1,0 +1,141 @@
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35); /* sombra sobre a imagem */
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.95);
+    padding: 35px 45px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+/* Botão de Novo Salão */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-bottom: 25px;
+    background-color: #007BFF;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Lista de salões */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    background: rgba(0,123,255,0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: rgba(0,123,255,0.2);
+    transform: translateY(-2px);
+}
+
+.salao-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.salao-info strong {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+/* Links de ação */
+.actions a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media(max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        margin-top: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

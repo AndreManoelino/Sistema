@@ -1,0 +1,12 @@
+# Arquivo de ambiente
+.env
+
+# Pasta vendor
+vendor/
+
+# Pasta writable
+writable/
+
+# Sistema
+.DS_Store
+Thumbs.db
