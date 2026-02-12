@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo elegante */
+body {
+    background: url('/imagens/01.jpeg') no-repeat center center;
+    background-size: cover;      /* Faz preencher a tela inteira */
+    background-attachment: fixed; /* Deixa fundo fixo elegante */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Container principal */
+.container {
+    
+    padding: 40px;
+    width: 420px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Título */
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3c72;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Inputs e Select */
+form input,
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Efeito ao focar */
+form input:focus,
+form select:focus {
+    border-color: #2a5298;
+    outline: none;
+    box-shadow: 0 0 6px rgba(42, 82, 152, 0.4);
+}
+
+/* Botão */
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover botão */
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Link voltar */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2a5298;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #1e3c72;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

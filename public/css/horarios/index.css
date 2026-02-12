@@ -1,0 +1,189 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    background: url('/imagens/01.jpeg') no-repeat center center;
+    background-size: cover;      /* Faz preencher a tela inteira */
+    background-attachment: fixed; /* Deixa fundo fixo elegante */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===== TITULOS ===== */
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+h2 {
+    margin: 30px 0 20px;
+    color: #444;
+}
+
+/* ===== BOTÃO PRINCIPAL ===== */
+.btn {
+    display: inline-block;
+    background: #ff5722;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #e64a19;
+    transform: translateY(-2px);
+}
+
+/* ===== TABELA ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* CABEÇALHO */
+thead {
+    background: #2c2c3e;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* CORPO */
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+tbody td {
+    padding: 14px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ===== BADGES DE STATUS ===== */
+.status-normal {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-bloqueado {
+    background: #ffebee;
+    color: #c62828;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ===== AÇÕES ===== */
+.acoes a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.acoes a.editar {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.acoes a.editar:hover {
+    background: #bbdefb;
+}
+
+.acoes a.excluir {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.acoes a.excluir:hover {
+    background: #ffcdd2;
+}
+
+/* ===== LINK VOLTAR ===== */
+.voltar {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #ff5722;
+    font-weight: 500;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 5px;
+    }
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

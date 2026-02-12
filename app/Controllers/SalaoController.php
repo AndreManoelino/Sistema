@@ -63,7 +63,10 @@ class SalaoController extends Controller
             'slug' => strtolower(str_replace(' ', '-', $this->request->getPost('nome'))),
             'email' => $this->request->getPost('email'),
             'telefone' => $this->request->getPost('telefone'),
-            
+            'rua' => $this->request->getPost('rua'),
+            'cep' => $this->request->getPost('cep'),
+            'cidade' => $this->request->getPost('cidade'),
+            'bairro' => $this->request->getPost('bairro'),
         ];
 
         $this->salaoModel->update($id, $data);
@@ -145,5 +148,5 @@ class SalaoController extends Controller
         return view('saloes/menuCliente', ['salao' => $salao]);
     }
 
-
+// Teste de comentario
 }

@@ -1,0 +1,118 @@
+/* ===== Estilos gerais ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Imagem de fundo elegante de relógio/agenda */
+    background: url('/imagens/01.jpeg') no-repeat center center;
+    background-size: cover;
+
+    /* Escurece a imagem para melhorar contraste */
+    filter: brightness(0.75);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* camada semi-transparente */
+    z-index: 0;
+}
+
+/* ===== Container do formulário ===== */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Título ===== */
+h1 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* ===== Formulário ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="time"] {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus {
+    border-color: #FF5722;
+    box-shadow: 0 0 5px rgba(255,87,34,0.5);
+    outline: none;
+}
+
+/* ===== Botão ===== */
+button[type="submit"] {
+    padding: 12px 25px;
+    background-color: #FF5722;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button[type="submit"]:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== Link voltar ===== */
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.voltar:hover {
+    color: #e64a19;
+    text-decoration: underline;
+}
+
+/* ===== Animação de fadeIn ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

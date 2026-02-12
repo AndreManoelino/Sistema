@@ -1,0 +1,92 @@
+/* ===== Estilos gerais ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fundo elegante com imagem */
+    background: url('/imagens/02.jpeg') no-repeat center center;
+    background-size: cover;
+
+    background-size: cover;
+    filter: brightness(0.8);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+/* ===== Container principal ===== */
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Título ===== */
+h1 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+/* ===== Links ===== */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+a {
+    color: #FF5722;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #e64a19;
+    text-decoration: underline;
+}
+
+/* ===== Botão voltar ===== */
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== Animação de fadeIn ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
