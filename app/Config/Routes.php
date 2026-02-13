@@ -40,5 +40,17 @@ $routes->post('horarios/store-data', 'HorarioController::storeData');
 
 
 $routes->get('servicos/(:num)', 'ServicoController::index/$1');
+
 $routes->post('servicos/store-barbeiro', 'ServicoController::storeBarbeiro');
 $routes->post('servicos/store-servico', 'ServicoController::storeServico');
+
+/* ===== BARBEIRO ===== */
+$routes->get('servicos/update-barbeiro/(:num)', 'ServicoController::editBarbeiro/$1');
+$routes->post('servicos/update-barbeiro/(:num)', 'ServicoController::updateBarbeiro/$1');
+$routes->get('servicos/delete-barbeiro/(:num)', 'ServicoController::deleteBarbeiro/$1');
+$routes->get('/servicos/edit-barbeiro/(:num)', 'ServicoController::editBarbeiro/$1');
+
+/* ===== SERVIÇO ===== */
+$routes->get('servicos/update-servico/(:num)', 'ServicoController::editServico/$1');
+$routes->post('servicos/update-servico/(:num)', 'ServicoController::updateServico/$1');
+$routes->get('servicos/delete-servico/(:num)', 'ServicoController::deleteServico/$1');

@@ -11,7 +11,7 @@ class BarbeiroModel extends Model
 
     protected $allowedFields = [
         'salao_id',
-        'nome'
+        'nome','foto'
 
     ];
 }

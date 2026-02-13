@@ -1,256 +1,188 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* ===== FUNDO ===== */
-
+/* FUNDO */
 body {
     background: url('/imagens/01.jpeg') no-repeat center center;
-    background-size: cover;      /* Faz preencher a tela inteira */
-    background-attachment: fixed; /* Deixa fundo fixo elegante */
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* overlay escuro */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 0;
+    background: rgba(0,0,0,0.75);
 }
 
-/* ===== CONTAINER ===== */
-.container {
+/* PAINEL */
+.painel {
     position: relative;
     z-index: 1;
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 40px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    padding: 30px;
+    height: 100vh;
+    overflow-y: auto;
+    color: #fff;
 }
 
-/* ===== TOPO ===== */
+/* TOPO */
 .topo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 28px;
-    color: #222;
-}
-
-h2 {
     margin-bottom: 20px;
-    color: #333;
 }
 
-/* ===== BOTÃO VOLTAR ===== */
 .btn-voltar {
-    text-decoration: none;
     color: #ff5722;
+    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.btn-voltar:hover {
-    color: #e64a19;
-}
-
-/* ===== CARDS ===== */
-.card {
-    background: #ffffff;
-    padding: 25px;
+/* BOX */
+.box {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
     border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
 }
 
-/* ===== FORMULÁRIOS ===== */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    width: 100%;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #ff5722;
-    box-shadow: 0 0 0 2px rgba(255,87,34,0.2);
-}
-
-/* ===== GRID DO FORM DE SERVIÇO ===== */
-.grid-form {
+/* AREA SUPERIOR */
+.area-superior {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-/* ===== BOTÕES ===== */
-.btn {
-    background: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e64a19;
-    transform: translateY(-2px);
-}
-
-/* ===== LISTA DE SERVIÇOS ===== */
-.lista-servicos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-
-/* ===== CARD DO SERVIÇO ===== */
-.servico-card {
+/* FORM */
+form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn {
+    background: #ff5722;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* BARBEIROS */
+.lista-barbeiros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.barbeiro-card {
+    background: rgba(255,255,255,0.12);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    min-width: 220px;
+}
 
-    padding: 20px;
+.barbeiro-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto-mini img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sem-foto-mini {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ff5722;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* SERVIÇOS */
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.servico-card {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
     border-radius: 12px;
-    background: #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
+    text-align: center;
 }
 
-.servico-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.servico-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-/* ===== FOTO ===== */
 .servico-foto img {
     width: 100%;
-    height: 180px;
+    height: 140px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid #ff5722;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.servico-foto img:hover {
-    transform: scale(1.05);
-}
-
-/* ===== DETALHES ===== */
-.servico-detalhes {
-    flex: 1;
-}
-
-.servico-detalhes h3 {
-    margin-bottom: 12px;
-    font-size: 20px;
-    color: #222;
-}
-
-.linha {
+.sem-foto {
+    height: 140px;
+    background: #333;
     display: flex;
-    gap: 8px;
-    margin-bottom: 6px;
-    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
-.label {
-    font-weight: bold;
-    color: #555;
+.acoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.valor {
-    color: #2e7d32;
-    font-weight: bold;
+.btn-editar {
+    color: #4caf50;
+    text-decoration: none;
 }
 
-/* ===== TEXTO VAZIO ===== */
-.vazio {
-    text-align: center;
-    color: #777;
-    padding: 20px;
+.btn-deletar {
+    color: #f44336;
+    text-decoration: none;
 }
 
-/* ===== RESPONSIVO ===== */
-@media (max-width: 768px) {
-
-    .container {
-        margin: 20px;
-        padding: 25px;
-    }
-
-    .topo {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .servico-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .servico-foto img,
-    .sem-foto {
-        width: 100%;
-        height: 200px;
-    }
-}
-/* ===== MODAL IMAGEM ===== */
+/* MODAL */
 .modal-img {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
-    z-index: 9999;
 }
 
 .modal-img img {
     max-width: 80%;
     max-height: 80%;
-    border-radius: 12px;
 }
 
 .modal-img.active {
